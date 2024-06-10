@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Homepage</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .anime-title {
+            color: #343a40;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="anime-title text-center">Welcome to the Anime World</h1>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2017/03/25/14/16/girl-2170114_960_720.jpg" alt="Anime Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Anime List</h5>
+                        <p class="card-text">Explore the list of anime.</p>
+                        <a href="{% url 'anime_list' %}" class="btn btn-primary">View Anime List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
