@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Actors</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .voice-actors-title {
+            color: #343a40;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .list-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .back-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="voice-actors-title">Voice Actors for {{ character.name }}</h1>
+        <div class="list-container">
+            <ul class="list-group">
+                {% for voice_actor in voice_actors %}
+                    <li class="list-group-item">
+                        <strong>Name:</strong> {{ voice_actor.name }} <br>
+                        <strong>Character:</strong> {{ voice_actor.character.name }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="back-link">
+            <a href="{% url 'characters' character.anime.id %}" class="btn btn-secondary mt-3">Back to Characters</a>
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
